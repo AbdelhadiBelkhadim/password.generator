@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                DarkGrey: '#24232C',
+                Green: '#A4FFAF',
+                Almost White: '#E6E5EA',
+                Black : '#24232C',
+                Grey: '#817D92',
+              }
+            }
+          }
+        }
+      </script>
+    <title>Document</title>
+</head>
+<body class="bg-black">
+  <main class="mx-[350px] items-center my-[133px] font-mono text-white">
+  <div>
+    <h1 class="text-center font-bold text-[#24232C]  mb-[20px]">Password Generator</h1>
+  </div>
+
+  <div class="bg-[#24232C] w-[540px] h-[40px] flex justify-between rounded-md p-[6px]">
+    <input type="text" id="text" class="bg-transparent text-white">
+    <a href="#" id="copy"><img src="fa-regular_copy.png" class="copy w-[21px] h-[24px] mt-[4px]"></a>
+  </div>
+
+  <div class="bg-[#24232C] h-[436.35px] w-[540px] mt-4 rounded-md p-6 gap-6 space-y-4">
+
+    <div class="flex justify-between ">
+      <h2>Character Length</h2>
+      <h3 class="font-bold text-green-200" id="rangeNumber">10</h3>
+    </div>
+
+    <div>
+      <input type="range" min="0" max="20" class="w-full accent-[#A4FFAF]" id="range">
+    </div>
+
+    <div class="space-y-4">
+      <div>
+        <input type="checkbox" id="check1">
+        <label>Include Uppercase Letters</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="check2">
+        <label>Include Lowercase Letters</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="check3">
+        <label>Include Numbers</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="check4">
+        <label>Include Symbols</label>
+      </div>
+
+      <div>
+        <button class="w-full text-black bg-[#A4FFAF] h-[40px] rounded-md" id="generate">GENERATE</button>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
